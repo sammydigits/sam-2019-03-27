@@ -4,6 +4,8 @@ This is a proof of concept application demonstrating the use of a decoupled Drup
 
 <p><img src="https://sam-2019-03-27-cms.sam-thompson.info/architecture.png" style="border: solid 1px lightgray;"></p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2fb09047-819d-4e37-b644-b2dd19bf4eda/deploy-status)](https://app.netlify.com/sites/sam-2019-03-27/deploys)
+
 ---
 
 ## Installation
