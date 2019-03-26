@@ -15,9 +15,11 @@ const Blog = ({ data }) => {
       />
 
       {data.allNodeArticle.edges.map(edge => (
-        <>
+        <div className="post">
           <h3>
-            <Link to={edge.node.id}>{edge.node.title}</Link>
+            <Link to={`blog/${edge.node.drupal_internal__nid}`}>
+              {edge.node.title}
+            </Link>
           </h3>
           <small>
             <em>{edge.node.created}</em>
@@ -36,7 +38,7 @@ const Blog = ({ data }) => {
               }
             />
           </div>
-        </>
+        </div>
       ))}
     </Layout>
   )
@@ -48,7 +50,7 @@ export const blogQuery = graphql`
     allNodeArticle {
       edges {
         node {
-          id
+          drupal_internal__nid
           title
           created(formatString: "MMMM DD, YYYY")
           relationships {

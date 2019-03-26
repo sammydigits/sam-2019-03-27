@@ -10,7 +10,7 @@ export default ({ data }) => {
       <div>
         <h1>{post.title}</h1>
         <small>
-          <em>{Date(post.created)}</em>
+          <em>{post.created}</em>
         </small>
         <div
           style={{ maxWidth: `900px`, marginBottom: `1.45rem`, width: `100%` }}
@@ -28,13 +28,14 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($id: String!) {
-    nodeArticle(id: { eq: $id }) {
+  query($drupal_internal__nid: Int!) {
+    nodeArticle(drupal_internal__nid: { eq: $drupal_internal__nid }) {
+      drupal_internal__nid
       title
       body {
         value
       }
-      created
+      created(formatString: "MMMM DD, YYYY")
       relationships {
         field_image {
           localFile {

@@ -1,25 +1,20 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 const Navigation = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allNodePage {
-          edges {
-            node {
-              title
-              drupal_internal__nid
-              path {
-                alias
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => <p>{data.allNodePage.edges[0].node.title}</p>}
-  />
+  <nav>
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/blog">Blog</Link>
+      </li>
+    </ul>
+  </nav>
 )
 
 export default Navigation

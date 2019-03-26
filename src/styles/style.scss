@@ -1,5 +1,45 @@
 @import "variables";
 
+html {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+a {
+  color: $links;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .container {
-  border: solid 1px $color;
+  padding: 0 5%;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: solid 4px $gray;
+
+  nav {
+    text-align: right;
+    margin: 20px;
+  }
+  nav ul {
+    list-style-type: none;
+  }
+  nav ul li {
+    display: inline;
+    padding-right: 25px;
+  }
+}
+
+.generic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

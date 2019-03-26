@@ -14,7 +14,7 @@ exports.createPages = ({ graphql, actions }) => {
       allNodeArticle {
         edges {
           node {
-            id
+            drupal_internal__nid
           }
         }
       }
@@ -22,10 +22,10 @@ exports.createPages = ({ graphql, actions }) => {
   `).then(result => {
     result.data.allNodeArticle.edges.forEach(({ node }) => {
       createPage({
-        path: node.id,
+        path: `/blog/${node.drupal_internal__nid}/`,
         component: path.resolve(`./src/templates/article.js`),
         context: {
-          id: node.id,
+          drupal_internal__nid: node.drupal_internal__nid,
         },
       })
     })
