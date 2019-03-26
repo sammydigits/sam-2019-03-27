@@ -7,11 +7,15 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
-  const { title, body } = data.nodePage
+  const { title, body, field_meta_tags } = data.nodePage
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title={field_meta_tags.title}
+        description={field_meta_tags.description}
+        keywords={field_meta_tags.keywords}
+      />
       <h1>{title}</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>{body.processed}</p>
@@ -35,6 +39,11 @@ export const indexPageQuery = graphql`
       }
       body {
         processed
+      }
+      field_meta_tags {
+        title
+        description
+        keywords
       }
     }
   }
