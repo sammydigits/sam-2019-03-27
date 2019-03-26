@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => {
+const AboutPage = ({ data }) => {
   const { title, body, field_meta_tags, relationships } = data.nodePage
 
   return (
@@ -24,10 +24,10 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage
-export const indexPageQuery = graphql`
+export default AboutPage
+export const aboutPageQuery = graphql`
   query {
-    nodePage(path: { alias: { eq: "/" } }) {
+    nodePage(path: { alias: { eq: "/about" } }) {
       id
       title
       path {
