@@ -7,7 +7,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
-  const { title, body, field_meta_tags } = data.nodePage
+  const { title, body, field_meta_tags, relationships } = data.nodePage
 
   return (
     <Layout>
@@ -17,10 +17,9 @@ const IndexPage = ({ data }) => {
         keywords={field_meta_tags.keywords}
       />
       <h1>{title}</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>{body.processed}</p>
+      <div dangerouslySetInnerHTML={{ __html: body.processed }} />
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
+        <Image src={relationships.field_main_image.uri.url} alt={title} />
       </div>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
@@ -44,6 +43,13 @@ export const indexPageQuery = graphql`
         title
         description
         keywords
+      }
+      relationships {
+        field_main_image {
+          uri {
+            url
+          }
+        }
       }
     }
   }
