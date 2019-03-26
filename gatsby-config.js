@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Sam 2019-03-27`,
+    title: `ABC Company`,
     description: `Example project using Drupal, Gatsby and GraphQL`,
     author: `@sammydigits`,
     drupalImagesUrl: `https://sam-2019-03-27-cms.sam-thompson.info`,
@@ -35,6 +35,7 @@ module.exports = {
         apiBase: `api`, // optional, defaults to `jsonapi`
       },
     },
+    `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
