@@ -2,7 +2,9 @@
 
 This is a proof of concept application demonstrating the use of a decoupled Drupal backend, with Gatsby static site generation and Netlify hosting. When content is created or updated in Drupal, a Netlify build hook is triggered and Gatsby is regenerated.
 
-<p><img src="https://sam-2019-03-27-cms.sam-thompson.info/architecture.png"></p>
+<p><img src="https://sam-2019-03-27-cms.sam-thompson.info/architecture.png" style="border: solid 1px lightgray;"></p>
+
+---
 
 ## Installation
 
@@ -21,8 +23,6 @@ This is a proof of concept application demonstrating the use of a decoupled Drup
 ## Improvements
 
 // What could be added to the app / API?
-
-- Use the Gatsby image plugin and GraphQL to pull/download the images from Drupal and optimize them. More time needed to get this working. For now, images are referenced directly from Drupal.
 
 - Gatsby doesn’t support ALT tags for images pulled from the Drupal JSON API, yet: https://github.com/gatsbyjs/gatsby/issues/10339 - so ALT tags are hardcoded to use the page title, for now.
 
