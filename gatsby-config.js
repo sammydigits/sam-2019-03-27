@@ -3,7 +3,6 @@ module.exports = {
     title: `ABC Architects`,
     description: `Example project using Drupal, Gatsby and GraphQL`,
     author: `@sammydigits`,
-    drupalImagesUrl: `https://sam-2019-03-27-cms.sam-thompson.info`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,12 +31,9 @@ module.exports = {
       resolve: `gatsby-source-drupal`,
       options: {
         baseUrl: `https://sam-2019-03-27-cms.sam-thompson.info/`,
-        apiBase: `api`, // optional, defaults to `jsonapi`
+        apiBase: `api`,
       },
     },
     `gatsby-plugin-sass`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
   ],
 }
