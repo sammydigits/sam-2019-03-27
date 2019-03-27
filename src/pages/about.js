@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import GenericContent from "../components/generic-content"
 
 const AboutPage = ({ data }) => {
   const { title, body, field_meta_tags, relationships } = data.nodePage
@@ -15,19 +15,11 @@ const AboutPage = ({ data }) => {
         description={field_meta_tags.description}
         keywords={field_meta_tags.keywords}
       />
-      <div className="generic">
-        <div>
-          <Img
-            fluid={
-              relationships.field_main_image.localFile.childImageSharp.fluid
-            }
-          />
-        </div>
-        <div className="content">
-          <h2>{title}</h2>
-          <div dangerouslySetInnerHTML={{ __html: body.processed }} />
-        </div>
-      </div>
+      <GenericContent
+        image={relationships.field_main_image.localFile.childImageSharp.fluid}
+        title={title}
+        body={body.processed}
+      />
     </Layout>
   )
 }
@@ -40,7 +32,6 @@ export const aboutPageQuery = graphql`
       title
       path {
         alias
-        langcode
       }
       body {
         processed
