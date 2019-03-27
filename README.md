@@ -1,16 +1,17 @@
 # Sam - 2019-03-27
 
 This is a proof of concept website for a fictional architecture company. Built in 48 hours, this application demonstrates the use of a decoupled Drupal backend, with Gatsby static site generation and Netlify hosting. When content is created or updated in Drupal, a Netlify build hook is triggered by Drupal and Gatsby is regenerated.
+<br>
 
-<p><img src="https://sam-2019-03-27-cms.sam-thompson.info/architecture.png" style="border: solid 1px lightgray;margin:20px 0;"></p>
-
+<p><img src="https://sam-2019-03-27-cms.sam-thompson.info/architecture.png" style="border: solid 1px lightgray;"></p>
+<br>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2fb09047-819d-4e37-b644-b2dd19bf4eda/deploy-status)](https://app.netlify.com/sites/sam-2019-03-27/deploys)
 
 ---
 
 ## Installation
 
-# Gatsby
+### Gatsby
 
 ```
 git clone https://github.com/sammydigits/sam-2019-03-27.git
@@ -18,7 +19,7 @@ cd sam-2019-03-27
 gatsby develop
 ```
 
-# Drupal
+### Drupal
 
 Install Drupal 8 and the following modules:
 
@@ -65,3 +66,5 @@ Setup a build hook in Netlify, and configure the Webhooks module to call it when
 // Anything else you want to mention
 
 The past 48 hours have been great fun! This was my first time using GraphQL and Gatsby, and I enjoyed the experience. I will be continuing to improve the application and address the issues mentioned in the improvements section above.
+
+:relieved:
