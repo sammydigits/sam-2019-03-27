@@ -15,14 +15,18 @@ const AboutPage = ({ data }) => {
         description={field_meta_tags.description}
         keywords={field_meta_tags.keywords}
       />
-      <div>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: body.processed }} />
-      </div>
-      <div>
-        <Img
-          fluid={relationships.field_main_image.localFile.childImageSharp.fluid}
-        />
+      <div className="generic">
+        <div>
+          <Img
+            fluid={
+              relationships.field_main_image.localFile.childImageSharp.fluid
+            }
+          />
+        </div>
+        <div className="content">
+          <h1>{title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: body.processed }} />
+        </div>
       </div>
     </Layout>
   )

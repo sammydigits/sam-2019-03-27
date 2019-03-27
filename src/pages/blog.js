@@ -13,33 +13,28 @@ const Blog = ({ data }) => {
         description="Our Company Blog"
         keywords="Drupal, React, Gatsby, GraphQL"
       />
-
-      {data.allNodeArticle.edges.map(edge => (
-        <div className="post">
-          <h3>
+      <div className="blog">
+        {data.allNodeArticle.edges.map(edge => (
+          <div className="card">
+            <small>
+              <em>{edge.node.created}</em>
+            </small>
+            <h3>
+              <Link to={`blog/${edge.node.drupal_internal__nid}`}>
+                {edge.node.title}
+              </Link>
+            </h3>
             <Link to={`blog/${edge.node.drupal_internal__nid}`}>
-              {edge.node.title}
+              <Img
+                fluid={
+                  edge.node.relationships.field_image.localFile.childImageSharp
+                    .fluid
+                }
+              />
             </Link>
-          </h3>
-          <small>
-            <em>{edge.node.created}</em>
-          </small>
-          <div
-            style={{
-              maxWidth: `300px`,
-              marginBottom: `1.45rem`,
-              width: `100%`,
-            }}
-          >
-            <Img
-              fluid={
-                edge.node.relationships.field_image.localFile.childImageSharp
-                  .fluid
-              }
-            />
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </Layout>
   )
 }
@@ -57,7 +52,7 @@ export const blogQuery = graphql`
             field_image {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 400, quality: 100) {
+                  fluid(maxWidth: 600, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }
