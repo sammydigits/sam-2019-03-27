@@ -13,6 +13,7 @@ const Blog = ({ data }) => {
         description="Our Company Blog"
         keywords="Drupal, React, Gatsby, GraphQL"
       />
+      <h2>Our Company Blog</h2>
       <div className="blog">
         {data.allNodeArticle.edges.map(edge => (
           <div className="card">
@@ -42,7 +43,7 @@ const Blog = ({ data }) => {
 export default Blog
 export const blogQuery = graphql`
   query {
-    allNodeArticle {
+    allNodeArticle(sort: { fields: [created], order: DESC }) {
       edges {
         node {
           drupal_internal__nid
