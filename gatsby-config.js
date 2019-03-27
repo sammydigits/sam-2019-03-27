@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `ABC Company`,
+    title: `ABC Architects`,
     description: `Example project using Drupal, Gatsby and GraphQL`,
     author: `@sammydigits`,
     drupalImagesUrl: `https://sam-2019-03-27-cms.sam-thompson.info`,
