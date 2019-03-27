@@ -3,6 +3,13 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 25px;
 
+  @include medium {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include small {
+    grid-template-columns: 1fr;
+  }
+
   .card {
     border: solid 1px $gray;
     padding: 15px;
@@ -17,6 +24,13 @@
 .article {
   display: grid;
   grid-template-columns: 1fr 2fr;
+
+  @include medium {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+  @include small {
+    grid-template-columns: 1fr;
+  }
 
   .image {
     margin-top: 25px;

@@ -1,0 +1,10 @@
+@mixin small() {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin medium() {
+  @media only screen and (max-width: 800px) {
+    @content;
+  }
+}

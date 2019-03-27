@@ -3,9 +3,22 @@ header {
   grid-template-columns: 1fr 1fr;
   border-bottom: solid 4px $gray;
 
+  @include medium {
+    grid-template-columns: 1.5fr 0.5fr;
+  }
+  @include small {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   nav {
     text-align: right;
     margin: 20px;
+
+    @include small {
+      text-align: center;
+      margin: 0;
+    }
 
     ul {
       list-style-type: none;

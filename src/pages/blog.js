@@ -10,22 +10,22 @@ const Blog = ({ data }) => {
     <Layout>
       <SEO
         title="Blog"
-        description="Our Company Blog"
-        keywords="Drupal, React, Gatsby, GraphQL"
+        description="ABC Architects Company Blog"
+        keywords="Architects, Architecture, Architectural"
       />
-      <h2>Our Company Blog</h2>
+      <h2>Our Blog</h2>
       <div className="blog">
         {data.allNodeArticle.edges.map(edge => (
-          <div className="card">
+          <div className="card" key={edge.node.drupal_internal__nid}>
             <small>
               <em>{edge.node.created}</em>
             </small>
             <h3>
-              <Link to={`blog/${edge.node.drupal_internal__nid}`}>
+              <Link to={`/blog/${edge.node.drupal_internal__nid}`}>
                 {edge.node.title}
               </Link>
             </h3>
-            <Link to={`blog/${edge.node.drupal_internal__nid}`}>
+            <Link to={`/blog/${edge.node.drupal_internal__nid}`}>
               <Img
                 fluid={
                   edge.node.relationships.field_image.localFile.childImageSharp
