@@ -1,6 +1,8 @@
 # Sam - 2019-03-27
 
 This is a proof of concept website for a fictional architecture company. Built in 48 hours, this application demonstrates the use of a decoupled Drupal backend, with Gatsby static site generation and Netlify hosting. When content is created or updated in Drupal, a Netlify build hook is triggered by Drupal and Gatsby is regenerated and deployed.
+
+View the website here: https://sam-2019-03-27-website.sam-thompson.info
 <br>
 <br>
 
@@ -37,6 +39,8 @@ Modify JSON API settings, change endpoint path prefix to “API”.
 
 Add a build hook in Netlify, and configure the Webhooks module to call it whenever a node is created or updated.
 
+**Note**: Login instructions for the Drupal instance have been sent via email.
+
 ## Security
 
 // List security concerns:
@@ -47,6 +51,8 @@ Add a build hook in Netlify, and configure the Webhooks module to call it whenev
 
 // - that have _not_ been addressed
 
+None that I am aware of.
+
 ## Improvements
 
 // What could be added to the app / API?
@@ -56,6 +62,7 @@ Add a build hook in Netlify, and configure the Webhooks module to call it whenev
   - There are upcoming improvements to the Drupal JSON API module which will rectify this, or
   - Changes to Gatsby can be made, as discussed in the issue above.
 - Pages created in Drupal could be automatically displayed as navigation items.
+- Highlight active navigation item.
 
 ## Libraries
 
@@ -64,7 +71,7 @@ Add a build hook in Netlify, and configure the Webhooks module to call it whenev
 - gatsby-source-drupal
   - To allow Gatsby to use Drupal as a datasource.
 - gatsby-plugin-sass
-  - To allow for CSS to be written in SASS, so variables and imports can be used.
+  - To allow for CSS to be written in SASS, so variables, mixins, and imports can be used.
 
 ---
 
@@ -74,4 +81,4 @@ Add a build hook in Netlify, and configure the Webhooks module to call it whenev
 
 The past 48 hours have been great fun! This was my first time using GraphQL and Gatsby, and I enjoyed the experience. I will be continuing to improve the application and address the issues mentioned in the improvements section above.
 
-Note: I did not incorporate Docker or write any tests for this project, due to lack of time, and limited experience with those technologies.
+**Note**: I did not incorporate Docker or write any tests for this project, due to lack of time, and limited experience with those technologies.
