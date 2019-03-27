@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <hr />
-      <small>&copy; 2019 ABC Company</small>
+      <small>&copy; 2019 ABC Architects LLC</small>
     </footer>
   )
 }
