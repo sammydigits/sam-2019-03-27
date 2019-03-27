@@ -1,6 +1,6 @@
 # Sam - 2019-03-27
 
-This is a proof of concept website for a fictional architecture company. Built in 48 hours, this application demonstrates the use of a decoupled Drupal backend, with Gatsby static site generation and Netlify hosting. When content is created or updated in Drupal, a Netlify build hook is triggered by Drupal and Gatsby is regenerated.
+This is a proof of concept website for a fictional architecture company. Built in 48 hours, this application demonstrates the use of a decoupled Drupal backend, with Gatsby static site generation and Netlify hosting. When content is created or updated in Drupal, a Netlify build hook is triggered by Drupal and Gatsby is regenerated and deployed.
 <br>
 
 <p><img src="https://sam-2019-03-27-cms.sam-thompson.info/architecture.png" style="border: solid 1px lightgray;"></p>
@@ -29,11 +29,11 @@ Install Drupal 8 and the following modules:
 - [MetaTag](https://www.drupal.org/project/metatag)
 - [Token](https://www.drupal.org/project/token)
 
-Enable the modules above, and also the Core serialization module.
+Enable the Core serialization module, and the modules shown above.
 
 Modify JSON API settings, change endpoint path prefix to “API”.
 
-Setup a build hook in Netlify, and configure the Webhooks module to call it whenever a node is created or updated.
+Add a build hook in Netlify, and configure the Webhooks module to call it whenever a node is created or updated.
 
 ## Security
 
@@ -51,13 +51,18 @@ Setup a build hook in Netlify, and configure the Webhooks module to call it when
 
 - Gatsby doesn’t support ALT tags for images pulled from the Drupal JSON API, yet: https://github.com/gatsbyjs/gatsby/issues/10339
 - Multilanguage support between drupal JSON API and Gatsby doesnt work, yet: https://github.com/gatsbyjs/gatsby/issues/10020
+  - There are upcoming improvements to the Drupal JSON API module which will rectify this, or
+  - Changes to Gatsby can be made, as discussed in the issue above.
+- Pages created in Drupal could be automatically displayed as navigation items.
 
 ## Libraries
 
 // What external libraries have you used and why?
 
 - gatsby-source-drupal
+  - To allow Gatsby to use Drupal as a datasource.
 - gatsby-plugin-sass
+  - To allow for CSS to be written in SASS, so variables and imports can be used.
 
 ---
 
@@ -67,4 +72,4 @@ Setup a build hook in Netlify, and configure the Webhooks module to call it when
 
 The past 48 hours have been great fun! This was my first time using GraphQL and Gatsby, and I enjoyed the experience. I will be continuing to improve the application and address the issues mentioned in the improvements section above.
 
-:relieved:
+Note: I did not incorporate Docker or write any tests for this project, due to lack of time, and limited experience with those technologies.
