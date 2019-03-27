@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
           />
         </div>
         <div className="content">
-          <h1>{title}</h1>
+          <h2>{title}</h2>
           <div dangerouslySetInnerHTML={{ __html: body.processed }} />
         </div>
       </div>
