@@ -1,6 +1,6 @@
 # Sam - 2019-03-27
 
-This is a proof of concept application demonstrating the use of a decoupled Drupal backend, with Gatsby static site generation and Netlify hosting. When content is created or updated in Drupal, a Netlify build hook is triggered by Drupal and Gatsby is regenerated.
+This is a proof of concept website for a fictional architecture company. Built in 48 hours, this application demonstrates the use of a decoupled Drupal backend, with Gatsby static site generation and Netlify hosting. When content is created or updated in Drupal, a Netlify build hook is triggered by Drupal and Gatsby is regenerated.
 
 <p><img src="https://sam-2019-03-27-cms.sam-thompson.info/architecture.png" style="border: solid 1px lightgray;padding:20px 0;"></p>
 
