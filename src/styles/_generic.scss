@@ -1,0 +1,15 @@
+.generic {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  .content {
+    margin-left: 25px;
+
+    a {
+      border-bottom: 1px solid $gray;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}

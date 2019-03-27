@@ -1,0 +1,19 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: solid 4px $gray;
+
+  nav {
+    text-align: right;
+    margin: 20px;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+        padding-right: 25px;
+      }
+    }
+  }
+}

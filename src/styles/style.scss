@@ -17,74 +17,8 @@ a:hover {
   padding: 0 5%;
 }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: solid 4px $gray;
+@import "header";
 
-  nav {
-    text-align: right;
-    margin: 20px;
+@import "generic";
 
-    ul {
-      list-style-type: none;
-
-      li {
-        display: inline;
-        padding-right: 25px;
-      }
-    }
-  }
-}
-
-.generic {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-
-  .content {
-    margin-left: 25px;
-
-    a {
-      border-bottom: 1px solid $gray;
-    }
-    a:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-.blog {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 25px;
-
-  .card {
-    border: solid 1px $gray;
-    padding: 15px;
-    margin: 15px 0;
-
-    h3 {
-      min-height: 50px;
-    }
-  }
-}
-
-.article {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-
-  .image {
-    margin-top: 25px;
-  }
-
-  .content {
-    margin-left: 25px;
-
-    a {
-      border-bottom: 1px solid $gray;
-    }
-    a:hover {
-      text-decoration: none;
-    }
-  }
-}
+@import "blog";
